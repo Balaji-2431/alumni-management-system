@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+/* @theme{
+    --color-brand-primary: #1E40AF;
+    --color-brand-primaryLight: #3B82F6;
+    --color-brand-accent: #7C3AED;
+    --color-brand-surface: #F8FAFC;
+    --color-brand-danger: #DC2626;
+    --color-brand-success: #059669;
+    --color-brand-card: #FFFFFF;
+    --color-brand-border: #E2E8F0;
+    --color-brand-muted: #64748B;
+    --color-brand-dark: #0F172A;
+} */
+@theme {
+    --color-brand-primary: #1E40AF;
+    --color-brand-primaryLight: #3B82F6;
+    --color-brand-accent: #7C3AED;
+    --color-brand-surface: #F8FAFC;
+    --color-brand-danger: #DC2626;
+    --color-brand-success: #059669;
+    --color-brand-card: #FFFFFF;
+    --color-brand-border: #E2E8F0;
+    --color-brand-muted: #64748B;
+    --color-brand-dark: #0F172A;
+
+
+
+   /* events and jobs */
+
+  --color-model-heading: #0f172a;
+  --color-model-text: #334155;
+  --color-model-muted: #64748b;
+
+  --color-model-primary: #2563eb;
+  --color-model-primary-hover: #1d4ed8;
+
+  --color-model-bg: #f9fafb;
+  --color-model-card-bg: #ffffff;
+  --color-model-border: #e5e7eb;
+
+
+  /* card */
+  /* --color-model-card-text: #334155;
+--color-model-card-muted: #64748b;
+--color-model-card-border: #e5e7eb;
+--color-model-card-heading: #0f172a;
+--color-model-primary: #2563eb;
+--color-model-primary-hover: #1d4ed8; */
+    
+}
+
+
+.main-content {
+  margin-left: 78px;
+  width: calc(100% - 78px);
+  min-height: 100vh;
+  transition: all 0.4s ease;
+  overflow-x: hidden;
+}
+
+.sidebar-open > .main-content {
+  margin-left: 250px;
+  width: calc(100% - 250px);
+}
+
+@media (max-width: 639px) {
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+  .sidebar-open > .main-content {
+    margin-left: 0px;
+    width: 100%;
+  }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+.animate-slideIn {
+  animation: slideIn 0.3s ease-out;
+}
+
